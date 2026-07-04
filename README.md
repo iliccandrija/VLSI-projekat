@@ -35,7 +35,7 @@ Projektni zadatak namenskog hardverskog sistema na **PYNQ-Z2** razvojnoj ploči.
 
 ## 🛠️ Hardverska arhitektura i moduli
 
-Projekat je strukturisan modularno kroz čist, sintabilan Verilog HDL i sastoji se od četiri ključne komponente koje povezuje `top_module.v`:
+Projekat je struktuiran modularno kroz čist, stabilan Verilog HDL i sastoji se od četiri ključne komponente koje povezuje `top_module.v`:
 
 ```
                   +----------------------------------------------+
