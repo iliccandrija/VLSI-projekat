@@ -100,16 +100,10 @@ Top-level fajl koji instancira četiri debounce filtera (tri za korisnički unos
 Za potrebe komunikacije između FPGA logike (PL) i procesorskog dela (PS), unutar `pynq_game_logic.v` rezervisana su tri izlazna 32-bitna registra:
 
 | Hardverski registar | Smer | Opis vrednosti |
-| --- | --- | --- |
-| `axi_user_num`<br> | PL $\rightarrow$ PS | Sadrži broj koji je korisnik selektovao (`0` do `7` u donja 3 bita).
-
- |
-| `axi_rolled_num`<br> | PL $\rightarrow$ PS | Sadrži nasumično izvučeni broj sa kockice (`0` do `7` u donja 3 bita).
-
- |
-| `axi_result`<br> | PL $\rightarrow$ PS | Status igre: `0` = Igra/bacanje u toku, `1` = POGODAK (Win), `2` = PROMAŠAJ (Loss).
-
- |
+| :--- | :---: | :--- |
+| `axi_user_num` | PL $\rightarrow$ PS | Sadrži broj koji je korisnik selektovao (`0` do `7` u donja 3 bita). |
+| `axi_rolled_num` | PL $\rightarrow$ PS | Sadrži nasumično izvučeni broj sa kockice (`0` do `7` u donja 3 bita). |
+| `axi_result` | PL $\rightarrow$ PS | Status igre: `0` = Igra/bacanje u toku, `1` = POGODAK (Win), `2` = PROMAŠAJ (Loss). |
 
 Ovi registri se mapiraju na **AXI GPIO** IP kor unutar Vivado Block Design-a, omogućavajući ARM procesoru da običnim čitanjem memorijske adrese (Memory-Mapped I/O) dobije trenutni status igre i vodi kompletnu statistiku.
 
